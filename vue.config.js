@@ -1,5 +1,5 @@
-const { defineConfig } = require("@vue/cli-service");
+const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-    publicPath: "/gode-penge/",
-    transpileDependencies: true,
-});
+  publicPath: '/Gode-investering/',
+  transpileDependencies: true
+})
