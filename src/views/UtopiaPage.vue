@@ -161,7 +161,7 @@ function goToArticle() {
   }
 
   .up-landscape {
-    width: 300px;
+    width: 200px;
   }
 
   .up-headline {
