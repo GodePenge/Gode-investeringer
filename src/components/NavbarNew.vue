@@ -91,11 +91,11 @@ export default {
 }
 
 .bm-burger-button {
-  position: absolute;
-  margin-left: auto;
-  right: 30px;
-  top: 20px;
-  display: none;
+  position: absolute !important;
+  margin-left: auto !important;
+  right: 30px !important;
+  top: 20px !important;
+  display: none !important;
 }
 
 .bm-item-list {
@@ -185,7 +185,7 @@ export default {
     display: none;
   }
   .bm-burger-button {
-    display: block;
+    display: block !important;
   }
 }
 </style>
