@@ -18,24 +18,9 @@ git add .
 git commit -m "$COMMIT_MSG"
 git push
 
-echo "🌿 Fetching latest gh-pages branch..."
-git fetch origin gh-pages
-
-echo "🌲 Creating subtree split from dist/..."
+echo "🚀 Deploying to gh-pages via subtree..."
 git subtree split --prefix dist -b deploy-temp
-
-echo "🚀 Checking out gh-pages and merging changes..."
-git checkout gh-pages
-git pull
-git merge deploy-temp
-
-echo "📤 Pushing to origin/gh-pages..."
-git push origin gh-pages
-
-echo "🔙 Switching back to main/master..."
-git checkout master
-
-echo "🧹 Cleaning up temporary branch..."
+git push origin deploy-temp:refs/heads/gh-pages --force
 git branch -D deploy-temp
 
 echo "✅ Deployment complete!"
