@@ -18,8 +18,6 @@ git add .
 git commit -m "$COMMIT_MSG"
 git push
 
-
-
 echo "🌿 Fetching latest gh-pages branch..."
 git fetch origin gh-pages
 
