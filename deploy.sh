@@ -17,6 +17,9 @@ git add .
 git commit -m "$COMMIT_MSG"
 git push
 
+echo "🛠 Building the Vue project..."
+npm run build
+
 echo "🌿 Fetching latest gh-pages branch..."
 git fetch origin gh-pages
 
