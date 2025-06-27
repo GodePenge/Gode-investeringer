@@ -9,13 +9,16 @@ if [ -z "$1" ]; then
   exit 1
 fi
 COMMIT_MSG="$1"
+
+echo "🛠 Building the Vue project..."
+npm run build
+
 echo "🔧 Adding and committing changes to main/master..."
 git add .
 git commit -m "$COMMIT_MSG"
 git push
 
-echo "🛠 Building the Vue project..."
-npm run build
+
 
 echo "🌿 Fetching latest gh-pages branch..."
 git fetch origin gh-pages
