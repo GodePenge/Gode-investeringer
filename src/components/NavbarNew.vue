@@ -87,7 +87,7 @@ export default {
 }
 
 .bm-burger-bars {
-  background-color: var(--color-white);
+  background-color: var(--color-white) !important;
 }
 
 .bm-burger-button {
