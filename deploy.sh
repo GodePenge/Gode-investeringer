@@ -25,6 +25,7 @@ git subtree split --prefix dist -b deploy-temp
 
 echo "🚀 Checking out gh-pages and merging changes..."
 git checkout gh-pages
+git pull
 git merge deploy-temp
 
 echo "📤 Pushing to origin/gh-pages..."
