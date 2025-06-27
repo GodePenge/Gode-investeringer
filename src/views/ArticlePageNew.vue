@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid m-0 p-0 ap-intro-section">
+  <div id="ex-articlePage" class="container-fluid m-0 p-0 ap-intro-section">
     <div class="ap-wrapper">
       <div class="ap-carousel-wrapper">
         <div class="card-holder">

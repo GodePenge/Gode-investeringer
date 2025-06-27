@@ -10,6 +10,7 @@
   "dependencies": {
     "bootstrap": "^5.3.5",
     "core-js": "^3.8.3",
+    "dig": "^0.0.6",
     "fitty": "^2.4.2",
     "install": "^0.13.0",
     "vue": "^3.2.13",

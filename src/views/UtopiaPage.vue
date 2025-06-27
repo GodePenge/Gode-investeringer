@@ -1,5 +1,5 @@
 <template>
-  <div id="ex-climateCrisisPage" class="up-container">
+  <div id="ex-utopiaPage" class="up-container">
     <div class="up-wrapper">
       <div class="up-left-holder">
         <img
@@ -10,7 +10,7 @@
         <button class="up-button" @click="goToArticle">Læs mere</button>
       </div>
       <div class="up-text-holder">
-        <h1 class="up-headline">Investér i den verden du ønsker at leve i</h1>
+        <h1 class="up-headline">Investér i den verden du ønsker</h1>
         <p class="up-text">
           Når vi investerer, former vi fremtiden. <br />
           <br />

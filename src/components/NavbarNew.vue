@@ -1,58 +1,60 @@
 <template>
   <div class="container-fluid m-0 p-0 navbar-wrapper">
-    <a class="navbar-brand" href="#">
-      <img
-        src="GP_Logo_new.png"
-        id="logo-image"
-        @click.prevent="goToHome"
-        class="img-fluid"
-      />
-    </a>
-    <a
-      class="navbar-text highlight-navbar-text"
-      href="#"
-      @click.prevent="scrollToTarget('ex-article-page')"
-      >Hvorfor Gode Investeringer?</a
-    >
-    <a
-      class="navbar-text highlight-navbar-text"
-      href="#"
-      @click.prevent="scrollToTarget('ex-article-page')"
-      >Hvordan Laves Gode Investeringer?</a
-    >
-    <a
-      class="navbar-text navbar-text-contact"
-      href="#"
-      @click.prevent="scrollToTarget('ex-contact-page')"
-      >kontakt os</a
-    >
-    <Slide right :closeOnNavigation="true">
+    <div class="navbar-container">
+      <a class="navbar-brand" href="#">
+        <img
+          src="GP_Logo_new.png"
+          id="logo-image"
+          @click.prevent="goToHome"
+          class="img-fluid"
+        />
+      </a>
       <a
-        class="navbar-text navbar-text-burger"
+        class="navbar-text highlight-navbar-text"
         href="#"
-        @click.prevent="scrollToTarget('ex-article-page')"
+        @click.prevent="scrollToTarget('ex-climateCrisisPage')"
         >Hvorfor Gode Investeringer?</a
       >
       <a
-        class="navbar-text navbar-text-burger"
+        class="navbar-text highlight-navbar-text"
         href="#"
-        @click.prevent="scrollToTarget('ex-article-page')"
+        @click.prevent="scrollToTarget('ex-utopiaPage')"
         >Hvordan Laves Gode Investeringer?</a
       >
       <a
-        class="navbar-text navbar-text-burger"
+        class="navbar-text highlight-navbar-text"
         href="#"
         @click.prevent="scrollToTarget('ex-contact-page')"
         >kontakt os</a
       >
-    </Slide>
+      <Slide right :closeOnNavigation="true">
+        <a
+          class="navbar-text navbar-text-burger"
+          href="#"
+          @click.prevent="scrollToTarget('ex-climateCrisisPage')"
+          >Hvorfor Gode Investeringer?</a
+        >
+        <a
+          class="navbar-text navbar-text-burger"
+          href="#"
+          @click.prevent="scrollToTarget('ex-utopiaPage')"
+          >Hvordan Laves Gode Investeringer?</a
+        >
+        <a
+          class="navbar-text navbar-text-burger"
+          href="#"
+          @click.prevent="scrollToTarget('ex-contact-page')"
+          >kontakt os</a
+        >
+      </Slide>
+    </div>
   </div>
 </template>
 
 <script>
-import { nextTick } from 'vue'
 import { Slide } from 'vue3-burger-menu'
 import { useRouter } from 'vue-router'
+import { helperFunctions } from '@/utils/HelperFunctions'
 
 export default {
   components: {
@@ -69,32 +71,7 @@ export default {
       })
     }
 
-    const scrollToTarget = idTarget => {
-      //Go to home first
-      router.push({
-        name: 'home'
-      })
-
-      // Wait a tick to ensure the DOM is updated
-      nextTick(() => {
-        const el = document.getElementById(idTarget)
-        if (el) {
-          // Scroll manually if VueScrollTo is failing
-          el.scrollIntoView({ behavior: 'smooth' })
-        } else {
-          console.warn('Podcast element not found yet, retrying…')
-          // Retry after delay in case DOM is not mounted yet
-          setTimeout(() => {
-            const retryEl = document.getElementById(idTarget)
-            if (retryEl) {
-              retryEl.scrollIntoView({ behavior: 'smooth' })
-            } else {
-              console.error('Still cannot find #idTarget')
-            }
-          }, 300)
-        }
-      })
-    }
+    const { scrollToTarget } = helperFunctions()
 
     return { scrollToTarget, goToHome }
   }
@@ -144,20 +121,8 @@ export default {
   text-wrap: wrap;
 }
 
-.navbar-text-contact {
-  transition: font-size, 0.4s;
-  font-size: 16px;
-  padding-right: 20px;
-  position: absolute;
-  top: 11px;
-  right: 10px;
-}
-
-.navbar-text-contact:hover {
-  font-size: 17px;
-}
-
 .highlight-navbar-text {
+  height: 64px;
   font-size: 17px;
   font-weight: 700;
   margin-left: 10px;
@@ -167,14 +132,26 @@ export default {
   font-size: 18px;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  height: 64px;
+  width: 100%;
+  background-color: var(--color-red);
+  cursor: auto;
+}
+
 .navbar-wrapper {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap; /* allows wrapping if needed */
-  gap: 12%;
-  width: 100%;
+  max-width: 100%;
   height: 64px;
   padding: 0 1rem;
   background-color: var(--color-red);
@@ -182,12 +159,12 @@ export default {
 }
 
 #logo-image {
-  width: 64px;
+  width: 80px;
   height: auto;
   position: relative;
   flex-shrink: 0;
-  top: 24px;
-  left: 24px;
+  top: 18px;
+  left: 14px;
   margin-right: 15%;
   cursor: pointer;
 }

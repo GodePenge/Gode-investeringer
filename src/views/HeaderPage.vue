@@ -2,7 +2,7 @@
   <div id="ex-header-page" class="container-fluid m-0 p-0 hp-container">
     <div class="hp-wrapper">
       <div class="hp-text-container">
-        <p ref="headline" class="hp-headline">
+        <h1 class="hp-headline headline-a">
           Investeringer skal gøre
           <span class="hp-dynamic-wrapper">
             <transition name="fade" mode="out-in">
@@ -11,19 +11,22 @@
               }}</span>
             </transition>
           </span>
-        </p>
+        </h1>
 
-        <p class="hp-normal-text">
+        <p class="text-a">
           I dag skaber investeringer ulighed, kriser og klimaskader. Men det
-          behøver ikke være sådan.
-        </p>
-        <p class="hp-normal-text">
-          Projektet Gode Investeringer sætter spørgsmåltegn ved vores
+          behøver ikke være sådan. <br />
+          <br />Projektet Gode Investeringer sætter spørgsmåltegn ved vores
           investeringer - opdag en vej, hvor investeringer spirer med værdi.
         </p>
         <div class="hp-button-holder">
-          <button class="hp-purple-button">Dyk ned i investeringer</button>
-          <button class="hp-purple-button" @click="showPopup = true">
+          <button
+            class="button-a hp-purple-button"
+            @click.prevent="scrollToTarget('ex-articlePage')"
+          >
+            Dyk ned i investeringer
+          </button>
+          <button class="button-a hp-purple-button" @click="showPopup = true">
             Læs mere om projektet
           </button>
         </div>
@@ -55,6 +58,9 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import Popup from './Popup.vue'
+import { helperFunctions } from '@/utils/HelperFunctions'
+
+const { scrollToTarget } = helperFunctions()
 
 const showPopup = ref(false)
 
@@ -63,11 +69,11 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
 `
 
 const words = [
-  'fællesskabet stærkere.',
+  'fællesskabet stærkere',
   'godt',
-  'værdier til virkelighed.',
-  'en forskel.',
-  'fremtiden bedre.'
+  'værdier til virkelighed',
+  'en forskel',
+  'fremtiden bedre'
 ]
 
 const currentWord = ref(words[0])
@@ -96,7 +102,7 @@ onBeforeUnmount(() => {
 }
 
 .hp-wrapper {
-  height: 40rem;
+  height: 36rem;
   max-width: 1200px;
   box-sizing: border-box;
   padding: 3rem 2rem;
@@ -109,6 +115,7 @@ onBeforeUnmount(() => {
 }
 
 .hp-text-container {
+  padding-left: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,36 +138,19 @@ onBeforeUnmount(() => {
 
 .hp-purple-button {
   background-color: var(--color-light-purple);
+  border-color: var(--color-light-purple) !important;
   color: var(--color-white);
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-weight: 500;
-  border-width: 4px;
-  border-color: rgb(255, 255, 255, 0);
-  flex: 1 1 0;
-  transition: background-color, color 0.6s;
 }
 
 .hp-purple-button:hover {
   background-color: var(--color-white);
   color: var(--color-light-purple);
-  border-width: 4px;
   border-color: var(--color-light-purple);
 }
 
 .hp-headline {
+  font-size: 3.3rem;
   color: var(--color-dark-green);
-  font-size: clamp(2rem, 6vw, 3.7rem);
-  font-family: 'Karma', serif;
-  font-weight: 700;
-}
-
-.hp-normal-text {
-  flex-shrink: 1;
-  color: black;
-  font-family: Arial;
 }
 
 .image-holder {
@@ -178,18 +168,18 @@ onBeforeUnmount(() => {
 }
 
 .hp-skyscrape {
-  width: 70%;
+  width: 80%;
   height: auto;
-  left: -8%;
-  top: 0%;
+  left: -14%;
+  top: 6%;
   z-index: 3;
 }
 
 .hp-forest {
-  width: 65%;
+  width: 70%;
   height: auto;
-  left: 28%;
-  top: 8%;
+  left: 30%;
+  top: 16%;
   z-index: 2;
 }
 
@@ -218,7 +208,7 @@ onBeforeUnmount(() => {
 
 @media (min-width: 992px) and (max-width: 1100px) {
   .hp-headline {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: 2.6rem;
   }
   .hp-purple-button {
     width: 24vw;
@@ -284,7 +274,7 @@ onBeforeUnmount(() => {
 
 @media (max-width: 480px) {
   .hp-headline {
-    font-size: 8vw;
+    font-size: 7vw;
   }
 }
 </style>

@@ -5,6 +5,7 @@ import router from './routes'
 import $bus from './utils/Events'
 import VueScrollTo from 'vue-scrollto'
 import './assets/theme.css'
+import './assets/global.css'
 
 const app = createApp(App)
 
