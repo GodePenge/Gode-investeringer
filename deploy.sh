@@ -1,30 +1,39 @@
+
 #!/bin/bash
-
+# Exit on error
 set -e
-
+# Ensure a commit message is provided
 if [ -z "$1" ]; then
   echo "❌ Error: Please provide a commit message."
   echo "Usage: ./deploy.sh \"Your commit message here\""
   exit 1
 fi
-
 COMMIT_MSG="$1"
-DEFAULT_BRANCH="master"  # Change to "main" if needed
-
-echo "🔧 Committing changes to $DEFAULT_BRANCH..."
+echo "🔧 Adding and committing changes to main/master..."
 git add .
 git commit -m "$COMMIT_MSG"
 git push
 
-echo "🛠 Building Vue project..."
+echo "🛠 Building the Vue project..."
 npm run build
 
-# Optional: Include custom domain CNAME
-# echo 'www.yourdomain.com' > dist/CNAME
+echo "🌿 Fetching latest gh-pages branch..."
+git fetch origin gh-pages
 
-echo "🌲 Creating and pushing subtree to gh-pages..."
+echo "🌲 Creating subtree split from dist/..."
 git subtree split --prefix dist -b deploy-temp
-git push origin deploy-temp:refs/heads/gh-pages --force
+
+echo "🚀 Checking out gh-pages and merging changes..."
+git checkout gh-pages
+git merge deploy-temp
+
+echo "📤 Pushing to origin/gh-pages..."
+git push origin gh-pages
+
+echo "🔙 Switching back to main/master..."
+git checkout master
+
+echo "🧹 Cleaning up temporary branch..."
 git branch -D deploy-temp
 
-echo "✅ Deployed to gh-pages successfully!"
+echo "✅ Deployment complete!"
