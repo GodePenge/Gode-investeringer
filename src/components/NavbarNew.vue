@@ -80,14 +80,14 @@ export default {
 
 <style>
 .bm-menu {
-  height: 40%;
-  background-color: var(--color-dark-green);
-  padding-top: 30px; /* Place content 60px from the top */
-  transition: 0.4s; /*0.5 second transition effect to slide in the sidenav*/
+  height: 50% !important;
+  background-color: var(--color-red) !important;
+  padding-top: 30px !important; /* Place content 60px from the top */
+  transition: 0.4s !important; /*0.5 second transition effect to slide in the sidenav*/
 }
 
 .bm-burger-bars {
-  background-color: var(--color-dark-green);
+  background-color: var(--color-white);
 }
 
 .bm-burger-button {
