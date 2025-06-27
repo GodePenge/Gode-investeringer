@@ -1,7 +1,7 @@
 <template>
   <div class="td-intro-section">
     <div class="td-wrapper">
-      <h1 class="td-headline">{{ currentCard.fullTitle }}</h1>
+      <h1 class="headline-a td-headline">{{ currentCard.fullTitle }}</h1>
 
       <div></div>
 
@@ -15,11 +15,15 @@
       </div>
 
       <div class="td-button-holder" :style="{ marginTop: buttonOffset + 'px' }">
-        <button class="td-button" :disabled="!hasNext" @click="next">
+        <button class="button-a td-button" :disabled="!hasNext" @click="next">
           {{ 'Videre til ' + nextTitle }}
         </button>
 
-        <button class="td-button" :disabled="!hasPrevious" @click="previous">
+        <button
+          class="button-a td-button"
+          :disabled="!hasPrevious"
+          @click="previous"
+        >
           {{ 'Tilbage til ' + previousTitle }}
         </button>
       </div>
@@ -103,15 +107,13 @@ export default {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr auto;
   align-items: start;
-  gap: 60px;
+  gap: 40px;
 }
 
 .td-headline {
   color: var(--color-dark-green);
   font-size: 3.2rem;
-  font-family: 'Karma', serif;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .td-text {
@@ -135,6 +137,7 @@ export default {
 .td-button {
   width: 100%;
   background-color: var(--color-light-purple);
+  border-color: var(--color-light-purple);
   color: var(--color-white);
   padding-right: 20px;
   padding-left: 20px;
@@ -142,19 +145,18 @@ export default {
   padding-bottom: 8px;
   font-weight: 500;
   border-width: 4px;
-  border-color: rgb(255, 255, 255, 0);
   flex: 1 1 0;
-  transition: background-color, color 0.6s;
 }
 
 .td-button:hover:not(:disabled) {
   background-color: var(--color-white);
   color: var(--color-light-purple);
-  border-width: 4px;
   border-color: var(--color-light-purple);
 }
 
 button:disabled {
+  border-color: var(--color-light-purple) !important;
+  border: 4px solid;
   opacity: 0.5;
   cursor: not-allowed;
 }

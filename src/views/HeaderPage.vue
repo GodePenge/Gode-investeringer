@@ -149,7 +149,7 @@ onBeforeUnmount(() => {
 }
 
 .hp-headline {
-  font-size: 3.3rem;
+  font-size: 3.2rem;
   color: var(--color-dark-green);
 }
 

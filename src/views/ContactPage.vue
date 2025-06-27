@@ -1,5 +1,39 @@
 <template>
   <div id="ex-contact-page" class="container-fluid background-contact">
+    <div class="col-md-3">
+      <strong class="mb-2 headline">Kontakt os</strong>
+      <p></p>
+      <p class="normal-text">
+        Sebastian Solander-Bruus <br />
+        <a class="link-text" href="mailto:sebastian@godepenge.dk"
+          >sebastian@godepenge.dk</a
+        >
+      </p>
+      <p class="normal-text">
+        Jonas Jensen <br />
+        <a class="link-text" href="mailto:jonas@godepenge.dk"
+          >jonas@godepenge.dk</a
+        >
+      </p>
+    </div>
+    <div class="col-md-3">
+      <strong class="mb-2 headline">Om projektet</strong>
+      <p></p>
+      <p class="link-text">
+        <a class="link-text" @click="showPopup = true">Projektbeskrivelse</a
+        ><br />
+        <a href="Documents/Tak-til.pdf" download>Tak til.pdf</a><br />
+        <a href="Documents/Disclaimer.pdf" download>Disclaimer.pdf</a><br />
+        <a href="Documents/Billedkreditering.pdf" download
+          >Licens og billedkreditering.pdf</a
+        >
+      </p>
+      <p class="link-text">
+        <a href="https://www.godepenge.dk/" target="_blank"
+          >Gode Penge hjemmeside</a
+        >
+      </p>
+    </div>
     <div class="row">
       <div class="d-flex flex-column align-items-start">
         <strong class="mb-2 headline">Støtte</strong>
@@ -17,36 +51,6 @@
           />
         </div>
       </div>
-    </div>
-    <div class="col-md-3">
-      <strong class="mb-2 headline">Kontakt os</strong>
-      <p></p>
-      <p class="normal-text">
-        Sebastian Solander-Bruus <br />
-        sebastian@godepenge.dk
-      </p>
-      <p class="normal-text">
-        Jonas Jensen <br />
-        jonas@godepenge.dk
-      </p>
-    </div>
-    <div class="col-md-3">
-      <strong class="mb-2 headline">Om projektet</strong>
-      <p></p>
-      <p class="link-text">
-        <a class="link-text" @click="showPopup = true">Projektbeskrivelse</a
-        ><br />
-        <a href="Documents/Tak-til.pdf" download>Tak til.pdf</a><br />
-        <a href="Documents/Disclaimer.pdf" download>Disclaimer.pdf</a><br />
-        <a href="Documents/Billedkreditering.pdf" download
-          >Licens og billedkreditering (pdf)</a
-        >
-      </p>
-      <p class="link-text">
-        <a href="https://www.godepenge.dk/" target="_blank"
-          >Gode Penge hjemmeside</a
-        >
-      </p>
     </div>
     <Popup
       v-if="showPopup"
@@ -72,8 +76,8 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
 <style>
 .background-contact {
   display: flex;
-  justify-content: left;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
   background-color: var(--color-red);
   padding-top: 48px;
@@ -92,7 +96,7 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
   min-width: 240px;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -126,9 +130,26 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
   .background-contact {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
     gap: 40px;
+  }
+
+  .background-contact > div {
+    align-items: center; /* center inner flex columns */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headline,
+  .normal-text,
+  .link-text {
+    align-self: center; /* optional */
+    text-align: center; /* ensure text is centered */
+  }
+
+  .cp-image-holder {
+    align-items: center;
   }
 }
 </style>

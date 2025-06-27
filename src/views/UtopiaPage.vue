@@ -7,11 +7,13 @@
           alt="landscape"
           class="up-landscape"
         />
-        <button class="up-button" @click="goToArticle">Læs mere</button>
+        <button class="button-a up-button" @click="goToArticle">
+          Læs mere
+        </button>
       </div>
       <div class="up-text-holder">
-        <h1 class="up-headline">Investér i den verden du ønsker</h1>
-        <p class="up-text">
+        <h1 class="headline-a up-headline">Investér i den verden du ønsker</h1>
+        <p class="text-a up-text">
           Når vi investerer, former vi fremtiden. <br />
           <br />
           Vi kan vælge at understøtte virksomheder, der bygger fællesskaber,
@@ -83,14 +85,11 @@ function goToArticle() {
 .up-headline {
   color: var(--color-white);
   font-size: 3.7rem;
-  font-family: 'Karma', serif;
-  font-weight: 700;
 }
 
 .up-text {
   flex-shrink: 1;
   color: var(--color-white);
-  font-family: Arial;
 }
 
 .up-left-holder {
@@ -116,23 +115,20 @@ function goToArticle() {
   position: relative;
   background-color: var(--color-light-purple);
   color: var(--color-white);
+  border-color: var(--color-light-purple);
   padding-right: 60px;
   padding-left: 60px;
   padding-top: 8px;
   padding-bottom: 8px;
   font-weight: 500;
-  border-width: 4px;
-  border-color: rgb(255, 255, 255, 0);
   flex: 1 1 0;
   z-index: 2;
   left: 100px;
-  transition: background-color, color 0.6s;
 }
 
 .up-button:hover {
   background-color: var(--color-white);
   color: var(--color-light-purple);
-  border-width: 4px;
   border-color: var(--color-light-purple);
 }
 

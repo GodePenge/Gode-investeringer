@@ -2,14 +2,16 @@
   <div class="ic-container">
     <div class="ic-wrapper">
       <div class="ic-text-holder">
-        <h1 class="ic-headline">Hvad skal dine investeringer skabe?</h1>
-        <p class="ic-text">
+        <h1 class="headline-a ic-headline">
+          Hvad skal dine investeringer skabe?
+        </h1>
+        <p class="text-a ic-text">
           Investering handler ikke kun om penge – det handler også om, hvilken
           verden vi er med til at forme i fremtiden. Hos Gode Penge opfordrer vi
           til at tænke over intentionen bag investeringer og vælge muligheder,
           der skaber samfundsværdi frem for blot økonomisk gevinst.
         </p>
-        <button class="ic-button">
+        <button class="button-a ic-button">
           <span class="btn-text-large" @click="goToArticle"
             >Læs hvorfor vores investeringer skal gøre godt</span
           >
@@ -84,32 +86,24 @@ function goToArticle() {
   overflow: visible;
   width: 10px;
   font-size: 3.7rem;
-  font-family: 'Karma', serif;
-  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .ic-text {
   flex-shrink: 1;
   color: var(--color-white);
-  font-family: Arial;
 }
 
 .ic-button {
   background-color: var(--color-light-green);
+  border-color: var(--color-light-green);
   color: var(--color-white);
-  border-width: 4px;
-  border-color: rgb(255, 255, 255, 0);
   padding: 0.5rem 1rem;
   font-weight: 1000;
-  cursor: pointer;
-  position: relative;
-  transition: background-color, color 0.6s;
 }
 .ic-button:hover {
   background-color: var(--color-white);
   color: var(--color-light-green);
-  border-width: 4px;
   border-color: var(--color-light-green);
 }
 
@@ -163,6 +157,10 @@ function goToArticle() {
 }
 
 @media (max-width: 768px) {
+  .ic-container {
+    overflow: hidden;
+  }
+
   .ic-text-holder {
     position: relative;
     top: -200px;
@@ -174,6 +172,7 @@ function goToArticle() {
     gap: 60px;
     flex-direction: column-reverse;
     padding-bottom: 0;
+    margin-bottom: -80px;
   }
 
   .ic-headline {

@@ -5,10 +5,10 @@
       :style="{ backgroundImage: 'url(' + image + ')' }"
     ></div>
     <div class="card-content">
-      <h3 class="card-title">{{ title }}</h3>
+      <h3 class="headline-a card-title">{{ title }}</h3>
       <p class="card-text">{{ text }}</p>
     </div>
-    <button class="card-button" @click="goToArticle">Læs mere</button>
+    <button class="button-a card-button" @click="goToArticle">Læs mere</button>
   </div>
 </template>
 
@@ -80,8 +80,7 @@ function goToArticle() {
 
 .card-title {
   color: var(--color-white);
-  font-family: 'Karma', serif;
-  font-family: Arial;
+  margin-bottom: 16px !important;
 }
 
 .card-text {
@@ -90,22 +89,18 @@ function goToArticle() {
 
 .card-button {
   background-color: var(--color-light-purple);
+  border-color: var(--color-light-purple);
   color: var(--color-white);
-  border-width: 4px;
-  border-color: rgb(255, 255, 255, 0);
-  padding: 0.5rem 1rem;
   font-weight: 1000;
   cursor: pointer;
   position: relative;
   top: -24px;
   z-index: 20;
-  transition: background-color, color 0.6s;
 }
 
 .card-button:hover {
   background-color: var(--color-white);
   color: var(--color-light-purple);
-  border-width: 4px;
   border-color: var(--color-light-purple);
 }
 

@@ -27,7 +27,7 @@
         @click.prevent="scrollToTarget('ex-contact-page')"
         >kontakt os</a
       >
-      <Slide right :closeOnNavigation="true">
+      <Slide right :closeOnNavigation="true" class="bm-slide-wrapper">
         <a
           class="navbar-text navbar-text-burger"
           href="#"
@@ -40,12 +40,7 @@
           @click.prevent="scrollToTarget('ex-utopiaPage')"
           >Hvordan Laves Gode Investeringer?</a
         >
-        <a
-          class="navbar-text navbar-text-burger"
-          href="#"
-          @click.prevent="scrollToTarget('ex-contact-page')"
-          >kontakt os</a
-        >
+        <ContactPage></ContactPage>
       </Slide>
     </div>
   </div>
@@ -55,10 +50,12 @@
 import { Slide } from 'vue3-burger-menu'
 import { useRouter } from 'vue-router'
 import { helperFunctions } from '@/utils/HelperFunctions'
+import ContactPage from '@/views/ContactPage.vue'
 
 export default {
   components: {
-    Slide
+    Slide,
+    ContactPage
   },
 
   setup() {
@@ -80,7 +77,7 @@ export default {
 
 <style>
 .bm-menu {
-  height: 50% !important;
+  height: 80% !important;
   background-color: var(--color-red) !important;
   padding-top: 30px !important; /* Place content 60px from the top */
   transition: 0.4s !important; /*0.5 second transition effect to slide in the sidenav*/
@@ -88,6 +85,10 @@ export default {
 
 .bm-burger-bars {
   background-color: var(--color-white) !important;
+}
+
+.bm-slide-wrapper {
+  z-index: 9999;
 }
 
 .bm-burger-button {
@@ -99,7 +100,14 @@ export default {
 }
 
 .bm-item-list {
-  color: var(--color-white);
+  color: var(--color-white) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 20px !important;
+  padding: 20px !important;
 }
 
 .navbar-text {
@@ -118,6 +126,7 @@ export default {
 .navbar-text-burger {
   font-size: 20px;
   text-decoration: underline;
+  align-self: center;
   text-wrap: wrap;
 }
 

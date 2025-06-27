@@ -3,7 +3,7 @@
   <div class="popup-backdrop" @click.self="close">
     <div class="popup-box" :style="{ backgroundColor: backgroundColor }">
       <button class="popup-close" @click="close">×</button>
-      <h2 class="popup-title">{{ title }}</h2>
+      <h2 class="headline-a popup-title">{{ title }}</h2>
       <p class="popup-text" v-html="content"></p>
     </div>
   </div>
@@ -25,8 +25,9 @@ function close() {
 
 <style scoped>
 .popup-title {
-  font-family: 'Karma', serif;
   font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .popup-text {
@@ -56,8 +57,7 @@ function close() {
   width: 70%;
   max-width: 1200px;
   min-height: 60%;
-  padding: 2rem;
-  border-radius: 8px;
+  padding: 4rem;
   color: var(--color-white);
 }
 
@@ -71,6 +71,7 @@ function close() {
   color: var(--color-white);
   line-height: 1;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 @media (max-width: 480px) {

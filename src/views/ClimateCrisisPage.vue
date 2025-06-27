@@ -2,8 +2,10 @@
   <div id="ex-climateCrisisPage" class="ccp-container">
     <div class="ccp-wrapper">
       <div class="ccp-text-holder">
-        <h1 class="ccp-headline">Klimakrisen og vores investeringerne</h1>
-        <p class="ccp-text">
+        <h1 class="headline-a ccp-headline">
+          Klimakrisen og vores investeringerne
+        </h1>
+        <p class="text-a ccp-text">
           Klimakrisen rammer ikke kun naturen – den rammer også vores
           investeringer. <br />
           <br />
@@ -18,7 +20,9 @@
       <div class="ccp-left-holder">
         <div class="cpp-square"></div>
         <img src="Images/stonks-image.png" alt="stonk" class="ccp-stonk" />
-        <button class="ccp-button" @click="goToArticle">Læs mere</button>
+        <button class="button-a ccp-button" @click="goToArticle">
+          Læs mere
+        </button>
       </div>
     </div>
   </div>
@@ -82,14 +86,11 @@ function goToArticle() {
 .ccp-headline {
   color: var(--color-white);
   font-size: 3.7rem;
-  font-family: 'Karma', serif;
-  font-weight: 600;
 }
 
 .ccp-text {
   flex-shrink: 1;
   color: var(--color-white);
-  font-family: Arial;
 }
 
 .ccp-left-holder {
@@ -122,6 +123,7 @@ function goToArticle() {
 .ccp-button {
   position: relative;
   background-color: var(--color-dark-green);
+  border-color: var(--color-dark-green);
   color: var(--color-white);
   padding-right: 20px;
   padding-left: 20px;
@@ -129,16 +131,13 @@ function goToArticle() {
   padding-bottom: 8px;
   font-weight: 500;
   border-width: 4px;
-  border-color: rgb(255, 255, 255, 0);
   flex: 1 1 0;
   z-index: 2;
-  transition: background-color, color 0.6s;
 }
 
 .ccp-button:hover {
   background-color: var(--color-white);
   color: var(--color-dark-green);
-  border-width: 4px;
   border-color: var(--color-dark-green);
 }
 

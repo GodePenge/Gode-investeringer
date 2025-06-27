@@ -2,7 +2,7 @@
   <div class="qp-container">
     <div class="qp-wrapper">
       <div class="qp-text-holder">
-        <h1 class="qp-headline">
+        <h1 class="headline-a qp-headline">
           “We must transform our economic system to invest in what we value –
           people, nature, and the future.”
         </h1>
@@ -55,8 +55,6 @@
   white-space: wrap;
   overflow: visible;
   font-size: 3.7rem;
-  font-family: 'Karma', serif;
-  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -111,6 +109,10 @@
 }
 
 @media (max-width: 768px) {
+  .qp-text-holder {
+    width: 100%;
+  }
+
   .qp-headline {
     font-size: 2.8rem;
   }

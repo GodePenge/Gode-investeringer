@@ -11,8 +11,6 @@
     <ClimateCrisisPage></ClimateCrisisPage>
 
     <UtopiaPage></UtopiaPage>
-
-    <ContactPage></ContactPage>
   </div>
 </template>
 
@@ -23,7 +21,6 @@ import InvestCreation from './InvestCreation.vue'
 import QuotePage from './QuotePage.vue'
 import ClimateCrisisPage from './ClimateCrisisPage.vue'
 import UtopiaPage from './UtopiaPage.vue'
-import ContactPage from './ContactPage.vue'
 
 export default {
   components: {
@@ -32,8 +29,7 @@ export default {
     InvestCreation,
     QuotePage,
     ClimateCrisisPage,
-    UtopiaPage,
-    ContactPage
+    UtopiaPage
   }
 }
 </script>
