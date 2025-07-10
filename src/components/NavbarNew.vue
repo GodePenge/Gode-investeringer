@@ -125,9 +125,14 @@ export default {
 
 .navbar-text-burger {
   font-size: 20px;
-  text-decoration: underline;
+  font-size: 19px;
+  font-weight: 700;
   align-self: center;
   text-wrap: wrap;
+}
+
+.navbar-text-burger:hover {
+  font-size: 18px;
 }
 
 .highlight-navbar-text {

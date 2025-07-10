@@ -1,32 +1,33 @@
 <template>
-  <div id="ex-contact-page" class="container-fluid background-contact">
-    <div class="col-md-3">
+  <div id="ex-contact-page" class="background-contact">
+    <!-- Section 1: Contact -->
+    <div class="flex-column contact-section">
       <strong class="mb-2 headline">Kontakt os</strong>
-      <p></p>
       <p class="normal-text">
         Sebastian Solander-Bruus <br />
-        <a class="link-text" href="mailto:sebastian@godepenge.dk"
-          >sebastian@godepenge.dk</a
-        >
+        <a class="link-text" href="mailto:sebastian@godepenge.dk">
+          sebastian@godepenge.dk
+        </a>
       </p>
       <p class="normal-text">
         Jonas Jensen <br />
-        <a class="link-text" href="mailto:jonas@godepenge.dk"
-          >jonas@godepenge.dk</a
-        >
+        <a class="link-text" href="mailto:jonas@godepenge.dk">
+          jonas@godepenge.dk
+        </a>
       </p>
     </div>
-    <div class="col-md-3">
+
+    <!-- Section 2: About -->
+    <div class="flex-column about-section">
       <strong class="mb-2 headline">Om projektet</strong>
-      <p></p>
       <p class="link-text">
         <a class="link-text" @click="showPopup = true">Projektbeskrivelse</a
         ><br />
         <a href="Documents/Tak-til.pdf" download>Tak til.pdf</a><br />
         <a href="Documents/Disclaimer.pdf" download>Disclaimer.pdf</a><br />
-        <a href="Documents/Billedkreditering.pdf" download
-          >Licens og billedkreditering.pdf</a
-        >
+        <a href="Documents/Billedkreditering.pdf" download>
+          Licens og billedkreditering.pdf
+        </a>
       </p>
       <p class="link-text">
         <a href="https://www.godepenge.dk/" target="_blank"
@@ -34,24 +35,18 @@
         >
       </p>
     </div>
-    <div class="row">
-      <div class="d-flex flex-column align-items-start">
-        <strong class="mb-2 headline">Støtte</strong>
-        <div class="cp-image-holder" style="gap: 20px; min-width: 232px">
-          <img src="FS-Fond-logo.png" id="logo-img-buttom" class="img-fluid" />
-          <img
-            src="tuborgfondet-logo.png"
-            id="logo-img-buttom"
-            class="img-fluid logo-img"
-          />
-          <img
-            src="KR-Foundation_Logo.png"
-            id="logo-img-buttom"
-            class="img-fluid logo-img"
-          />
-        </div>
+
+    <!-- Section 3: Support -->
+    <div class="flex-column support-section">
+      <strong class="mb-2 headline">Støtte</strong>
+      <div class="cp-image-holder">
+        <img src="FS-Fond-logo.png" id="logo-img" class="img-fluid" />
+        <img src="tuborgfondet-logo.png" id="logo-img" class="img-fluid" />
+        <img src="KR-Foundation_Logo.png" id="logo-img" class="img-fluid" />
       </div>
     </div>
+
+    <!-- Popup -->
     <Popup
       v-if="showPopup"
       :title="popupTitle"
@@ -77,12 +72,18 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
 .background-contact {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 40px;
+  align-items: flex-start;
+  gap: 60px;
   background-color: var(--color-red);
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 60px;
+  padding: 48px 60px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
 }
 
 .headline {
@@ -90,14 +91,6 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
   color: var(--color-white);
   font-size: 1.2rem;
   padding-bottom: 18px;
-}
-
-.cp-image-holder {
-  min-width: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .normal-text {
@@ -120,36 +113,31 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
   text-decoration: none;
 }
 
-#logo-img-buttom {
+.cp-image-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  min-width: 232px;
+}
+
+#logo-img {
+  height: 50px;
   width: auto;
   display: block;
-  height: 50px;
 }
 
 @media (max-width: 768px) {
   .background-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 40px;
-  }
-
-  .background-contact > div {
-    align-items: center; /* center inner flex columns */
-    display: flex;
-    flex-direction: column;
-  }
-
-  .headline,
-  .normal-text,
-  .link-text {
-    align-self: center; /* optional */
-    text-align: center; /* ensure text is centered */
-  }
-
-  .cp-image-holder {
     align-items: center;
+    text-align: center;
+    padding: 32px 20px;
+  }
+
+  .flex-column {
+    align-items: center;
+    text-align: center;
   }
 }
 </style>

@@ -115,6 +115,10 @@ function goToArticle() {
 }
 
 @media (max-width: 480px) {
+  .card-content {
+    min-height: 290px;
+  }
+
   .card-wrapper {
     width: 80vw;
   }
