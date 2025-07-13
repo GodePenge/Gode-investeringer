@@ -10,6 +10,8 @@
 
     <ClimateCrisisPage></ClimateCrisisPage>
 
+    <ArticleBlogPage></ArticleBlogPage>
+
     <UtopiaPage></UtopiaPage>
   </div>
 </template>
@@ -20,6 +22,7 @@ import ArticlePageNew from './ArticlePageNew.vue'
 import InvestCreation from './InvestCreation.vue'
 import QuotePage from './QuotePage.vue'
 import ClimateCrisisPage from './ClimateCrisisPage.vue'
+import ArticleBlogPage from './ArticleBlogPage.vue'
 import UtopiaPage from './UtopiaPage.vue'
 
 export default {
@@ -29,6 +32,7 @@ export default {
     InvestCreation,
     QuotePage,
     ClimateCrisisPage,
+    ArticleBlogPage,
     UtopiaPage
   }
 }
