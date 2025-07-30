@@ -180,11 +180,12 @@ onBeforeUnmount(() => {
 
 .ap-intro-text-holder {
   max-width: 600px;
+  margin-bottom: 200px;
 }
 
 .ap-headline {
   color: var(--color-dark-green);
-  font-size: 3.7rem;
+  font-size: 3.6rem;
   margin-bottom: 1rem;
 }
 
@@ -243,6 +244,7 @@ onBeforeUnmount(() => {
 
   .ap-intro-text-holder {
     max-width: 600px;
+    margin-bottom: 0;
   }
 
   .ap-headline {

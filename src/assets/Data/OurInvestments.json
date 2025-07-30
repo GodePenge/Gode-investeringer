@@ -1,0 +1,26 @@
+[
+  {
+    "key": 0,
+    "title": "Hvor mange danskere investerer deres penge?",
+    "text": "Flere og flere danskere vælger i dag at investere deres opsparing. Siden 2014 er andelen, der investerer privat, steget fra 27% til 31% (<a href='https://finansdanmark.dk/media/jtqjrzid/analyse-af-investorkultur-analyseformat_final.pdf'>Finans Danmark, 2020</a>), og i 2021 alene kom der 123.000 nye investorer til. Den største vækst sker blandt yngre danskere, som udgjorde 60% af tilgangen mellem 2019 og 2022. I dag investerer omkring 1,37 millioner danskere i værdipapirer, altså aktier og obligationer, ikke bolig og pension. Det er et tegn på, at investering er blevet en større folkelig aktivitet og en nødvendighed for mange for ikke at falde økonomisk bagud fordi deres private formue stiger mindre end andres.",
+    "images": []
+  },
+  {
+    "key": 1,
+    "title": "Hvor meget har den gennemsnitlige dansker investeret?",
+    "text": "I Danmark har vi en stor formue placeret forskellige steder, hvor danskernes samlede aktiver, har en gennemsnitlig nettoformue på omkring 2,24 millioner kroner (<a href='https://www.ae.dk/node/3494/pdf-export'>Arbejderbevægelsens Erhvervsråd, 2024</a>). En stor del af denne formue stammer fra 1990'ernes formue boom og markante prisstigninger på både aktier og boliger. Det har øget afstanden mellem dem, der har haft adgang til at investere tidligt, og dem, der ikke har.",
+    "images": []
+  },
+  {
+    "key": 2,
+    "title": "Hvordan er investeringerne fordelt i Danmark?",
+    "text": "Formue og investeringskraft er i høj grad aldersbetinget i Danmark. De største nettoformuer findes blandt danskere i 60’erne, og netop denne gruppe har derfor størst mulighed for at påvirke økonomiens retning. Men formuefordelingen er langt fra jævn. Den rigeste ene procent ejer omkring en fjerdedel af den samlede formue (<a href='https://www.ae.dk/node/3494/pdf-export'>Arbejderbevægelsens Erhvervsråd, 2024</a>). En væsentlig del af forklaringen ligger i ejerskabet af unoterede aktier, altså ejerandele i virksomheder, der ikke handles på børsen, som udgør hele 18% af den samlede formue (<a href='https://www.ae.dk/node/3494/pdf-export'>Arbejderbevægelsens Erhvervsråd, 2024</a>). Denne type investering er ofte utilgængelig for almindelige danskere og understreger, hvordan rigdom i høj grad samles hos de få.",
+    "images": ["Images/building1-red-semi.png"]
+  },
+  {
+    "key": 3,
+    "title": "Hvad investerer danskerne mest i?",
+    "text": "De fleste danskeres formue er bundet op i bolig og pension, som tilsammen udgør omkring 65% af den almindelige danskers aktiver (<a href='https://www.ae.dk/node/3494/pdf-export'>Arbejderbevægelsens Erhvervsråd, 2024</a>). Samtidig udgør boliglån 77% (<a href='https://www.ae.dk/node/3494/pdf-export'>Arbejderbevægelsens Erhvervsråd, 2024</a>) af den samlede private gæld i Danmark. Det gør boligen til vores største aktive, men dermed også vores største økonomiske sårbarhed. Når investeringer er så koncentrerede i bestemte sektorer, bliver vores økonomi mindre fleksibel og mindre modstandsdygtig over for forandringer – særligt i en tid med klimakrise og behov for nye grønne løsninger.",
+    "images": ["Images/building1-red-semi.png", "Images/building1-red-semi.png"]
+  }
+]

@@ -6,10 +6,12 @@
           Hvad skal dine investeringer skabe?
         </h1>
         <p class="text-a ic-text">
-          Investering handler ikke kun om penge – det handler også om, hvilken
-          verden vi er med til at forme i fremtiden. Hos Gode Penge opfordrer vi
-          til at tænke over intentionen bag investeringer og vælge muligheder,
-          der skaber samfundsværdi frem for blot økonomisk gevinst.
+          Investering handler ikke kun om penge, det handler også om, hvilken
+          verden vi er med til at forme i fremtiden. <br />
+          <br />
+          Hos Gode Penge opfordrer vi til at tænke over intentionen bag
+          investeringer og vælge investeringsprodukter, der skaber samfundsværdi
+          frem for blot økonomisk gevinst.
         </p>
         <button class="button-a ic-button">
           <span class="btn-text-large" @click="goToArticle"
@@ -18,7 +20,9 @@
           <span class="btn-text-small" @click="goToArticle">Læs hvorfor</span>
         </button>
       </div>
-      <img src="Images/hugging-red-square.png" class="ic-hug" />
+      <div class="image-cropper">
+        <img src="Images/hugging-red-square.png" class="ic-hug" />
+      </div>
     </div>
   </div>
 </template>
@@ -67,6 +71,7 @@ function goToArticle() {
   overflow: visible;
   flex-direction: row;
   gap: 80px;
+  overflow-x: hidden;
 }
 
 .ic-text-holder {
@@ -86,7 +91,8 @@ function goToArticle() {
   overflow: visible;
   width: 10px;
   font-size: 3.7rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  z-index: 10;
 }
 
 .ic-text {
@@ -114,8 +120,21 @@ function goToArticle() {
   display: inline;
 }
 
+.image-cropper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  width: 450px;
+  height: 410px;
+  overflow: hidden;
+  position: relative;
+}
+
 .ic-hug {
   width: 500px;
+  height: auto;
+  display: block;
 }
 
 @media (min-width: 992px) and (max-width: 1100px) {
@@ -180,6 +199,13 @@ function goToArticle() {
     width: 100%;
     font-size: 3.7rem;
   }
+
+  .image-cropper {
+    margin-left: 0;
+    width: 80vw;
+    height: auto;
+  }
+
   .ic-hug {
     width: 80vw;
   }

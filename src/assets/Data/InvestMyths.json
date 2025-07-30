@@ -1,0 +1,42 @@
+[
+  {
+    "key": "Aktiehandel",
+    "title": "Når du køber en aktie, hvem støtter du så egentlig?",
+    "text": "Mange tror, at deres penge går direkte til virksomheden, når de køber en aktie. Men i virkeligheden går pengene typisk til en anden investor og ikke til virksomheden selv. Kun ved sjældne nyudstedelser får virksomheden pengene. Det gør aktiemarkedet til en arena for økonomisk omfordeling end reel støtte til virksomhederne."
+  },
+  {
+    "key": "Indeksfonde",
+    "title": "Hvordan virker en indeksfond?",
+    "text": "Indeksfonde og ETF’er samler mange værdipapirer i én investering og gør det nemt og billigt at sprede sine investeringer. Men det har også skabt en koncentration af både kapital og indflydelse. I dag ejes omkring 20% af USA’s virksomheder, der opererer i hele verden (<a href='https://www.hbs.edu/bigs/john-coates-harvard-law-professor-on-the-financial-sector'>Harvard Business School, 2024</a>). Det gør det sværere at gennemskue, hvem der egentlig har beslutningsmagten i virksomhederne."
+  },
+  {
+    "key": "Pension",
+    "title": "Hvad sker der med din pension?",
+    "text": "Pensionskasser samler opsparinger fra millioner af danskere og investerer dem i værdipapirer, men også i enorme projekter som byggeri og infrastruktur. Du kan vælge, hvilken profil dine penge investeres efter, men ansvarlighed og bæredygtighed er sjældent førsteprioritet. I 2023 investerede danske pensionskasser f.eks. næsten 20 mia. kr. i fossil ekspansion (<a href='https://www.ms.dk/sites/default/files/publikationer/publikationer/2024/ms-fossilfrirapport.pdf'>Nordic Center for Sustainable Finance, 2024</a>)."
+  },
+  {
+    "key": "Kursstigning",
+    "title": "Hvad betyder det, når en aktie stiger?",
+    "text": "Aktiekurser afspejler forventninger, ikke nødvendigvis virkeligheden. En stigning betyder blot, at flere vil købe end sælge. Mange faktorer som politik og økonomiske nyheder kan påvirke kursen, uanset hvordan virksomheden faktisk klarer sig. Det gør aktiemarkedet mere usikkert, fordi markeder lettere kan manipuleres end, hvad mange forestiller sig."
+  },
+  {
+    "key": "Afkast",
+    "title": "Skal investeringer altid give penge tilbage?",
+    "text": "Afkast behøver ikke kun være økonomisk. Investeringer kan også give værdi i form af grønne områder, ren luft eller livskvalitet, noget vi sjældent måler i kroner. Ikke alle investeringer skal skabe penge, hvis de skaber varige forbedringer for mennesker og miljø."
+  },
+  {
+    "key": "Ejendom",
+    "title": "Er mursten den sikreste investering?",
+    "text": "Ejendomspriser er steget voldsomt over de sidste årtier, og boligen udgør hovedparten af danskernes aktiver (<a href='https://www.godepenge.dk/analyser?offset=1674145513549'>Gode Penge, 2022</a>). Men afkastet har en bagside: høj gæld, ulighed og klimarisici. Et boligmarked bør ikke kun handle om profit, men om tryghed og ansvar for at alle har tag over hovedet. Der er ingen garanti for at boligprisstigningerne bliver ved med at stige."
+  },
+  {
+    "key": "Tidspunkt",
+    "title": "Hvornår er det bedst at investere?",
+    "text": "Langsigtet investering slår kortsigtet timing. Historisk har aktiemarkedet i Danmark fra 1922 til 1999 givet i gennemsnit et inflationskorrigeret årligt afkast på 7% (CBS, 2001). Men det bygger på en verden i vækst. Fremtiden tegner mere usikkert, og både klimakrise og global uro kan ændre spillereglerne for, hvordan væksten ikke er mulig (<a href='https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(24)00310-3/fulltext'>The Lancet, 2025</a>)."
+  },
+  {
+    "key": "Vækst",
+    "title": "Hvorfor siger man, at markedet altid stiger?",
+    "text": "Markederne afspejler samfundets udvikling og forstærker den. Når økonomien vokser, gør markedet det ofte endnu mere. Desuden gør inflation, at pengenes værdi falder, så aktiemarkedet skal stige bare for at følge med. Derfor har investeringer historisk overgået opsparing, men det betyder ikke, at alle afkast slår inflationen eller kan fortsætte med fremtidig vækst (<a href='https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(24)00310-3/fulltext'>The Lancet, 2025</a>)."
+  }
+]

@@ -5,14 +5,15 @@
 
       <div></div>
 
-      <div>
+      <!-- <div class="rich-text">
         <p
           class="td-text"
           v-for="(paragraph, i) in currentCard.fullText"
           :key="i"
           v-html="paragraph"
         ></p>
-      </div>
+      </div> -->
+      <div class="rich-text" v-html="combinedHtml"></div>
 
       <div class="td-button-holder" :style="{ marginTop: buttonOffset + 'px' }">
         <button class="button-a td-button" :disabled="!hasNext" @click="next">
@@ -26,12 +27,22 @@
         >
           {{ 'Tilbage til ' + previousTitle }}
         </button>
+
+        <p class="text-a td-small-headline">Artikler</p>
+        <div v-for="(article, index) in articles" :key="index">
+          <a class="text-a td-link-text" :href="article.link" target="_blank">
+            {{ article.title }}
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import articles from '@/assets/Data/Articles.json'
+import { useRouter } from 'vue-router'
+
 export default {
   name: 'CardViewer',
   props: {
@@ -46,12 +57,28 @@ export default {
   },
   data() {
     return {
-      currentIndex: this.selectedIndex
+      currentIndex: this.selectedIndex,
+      articles: articles,
+      router: useRouter()
     }
   },
   computed: {
     currentCard() {
       return this.cards[this.currentIndex]
+    },
+    combinedHtml() {
+      // return this.cards[this.currentIndex].fullText.join('')
+
+      return this.cards[this.currentIndex].fullText
+        .map(text => {
+          // If it starts with an h3 (or another tag), keep it as-is
+          if (text.trim().startsWith('<h3')) {
+            return text
+          }
+          // Otherwise, wrap in <p> with class
+          return `<p class="td-text">${text}</p>`
+        })
+        .join('')
     },
     hasNext() {
       return this.currentIndex < this.cards.length - 1
@@ -88,7 +115,19 @@ export default {
 }
 </script>
 
+<style></style>
+
 <style scoped>
+.rich-text ::v-deep h3 {
+  font-family: Arial;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.rich-text ::v-deep h3:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
 .td-intro-section {
   width: 100%;
   background-color: var(--color-white);
@@ -102,6 +141,7 @@ export default {
   max-width: 1200px;
   box-sizing: border-box;
   padding: 3rem 2rem;
+  padding-top: 5rem;
   background-color: var(--color-white);
   display: grid;
   grid-template-rows: auto auto;
@@ -159,6 +199,17 @@ button:disabled {
   border: 4px solid;
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.td-small-headline {
+  color: var(--color-dark-green);
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.td-link-text {
+  color: var(--color-dark-green);
 }
 
 @media (max-width: 768px) {

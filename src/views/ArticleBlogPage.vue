@@ -260,7 +260,7 @@ export default {
   transition: transform 0.5s ease;
   gap: 2rem;
   will-change: transform;
-  padding-left: 560px;
+  padding-left: 260px;
 }
 
 .image-wrapper {
@@ -305,7 +305,7 @@ export default {
   }
 
   .carousel-track {
-    padding-left: 860px;
+    padding-left: 560px;
   }
 }
 
@@ -315,7 +315,7 @@ export default {
   }
 
   .carousel-track {
-    padding-left: 1130px;
+    padding-left: 850px;
   }
 
   .abp-text-wrapper {

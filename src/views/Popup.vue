@@ -25,6 +25,7 @@ function close() {
 
 <style scoped>
 .popup-title {
+  margin-top: 60px;
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 20px;
@@ -57,6 +58,8 @@ function close() {
   width: 70%;
   max-width: 1200px;
   min-height: 60%;
+  max-height: 90%;
+  overflow-y: auto;
   padding: 4rem;
   color: var(--color-white);
 }

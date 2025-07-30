@@ -56,7 +56,7 @@ function goToArticle() {
 
 .card-image {
   position: relative;
-  width: 108%;
+  width: 106.4%;
   height: 18vw;
   background-size: cover;
   background-position: center;
@@ -110,7 +110,8 @@ function goToArticle() {
   }
 
   .card-image {
-    height: 28vw;
+    top: 2.8vw;
+    height: 30vw;
   }
 }
 
@@ -124,7 +125,8 @@ function goToArticle() {
   }
 
   .card-image {
-    height: 40vw;
+    top: 2.8vw;
+    height: 43vw;
   }
 }
 </style>

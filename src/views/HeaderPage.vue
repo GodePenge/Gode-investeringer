@@ -40,13 +40,13 @@
       </div>
       <div class="image-holder">
         <img
-          src="Images/skyscraper-purple-square.png"
+          src="Images/Mathias_Reding_On_Unsplash.png"
           alt="skyscrape"
           class="hp-skyscrape"
         />
         <img src="Images/forest-blob.png" alt="forest" class="hp-forest" />
         <img
-          src="Images/windmill-red-semi.png"
+          src="Images/Waldemar_on_Unsplash.png"
           alt="windmill"
           class="hp-windmill"
         />
@@ -70,7 +70,6 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
 
 const words = [
   'fællesskabet stærkere',
-  'godt',
   'værdier til virkelighed',
   'en forskel',
   'fremtiden bedre'
@@ -106,6 +105,7 @@ onBeforeUnmount(() => {
   max-width: 1200px;
   box-sizing: border-box;
   padding: 3rem 2rem;
+  padding-bottom: 0;
   background-color: var(--color-white);
   display: flex;
   justify-content: center;
@@ -115,7 +115,7 @@ onBeforeUnmount(() => {
 }
 
 .hp-text-container {
-  padding-left: 60px;
+  padding-left: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,6 +126,7 @@ onBeforeUnmount(() => {
 }
 
 .hp-button-holder {
+  margin-top: 60px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -207,6 +208,10 @@ onBeforeUnmount(() => {
 }
 
 @media (min-width: 992px) and (max-width: 1100px) {
+  .hp-button-holder {
+    margin-top: 0px;
+  }
+
   .hp-headline {
     font-size: 2.6rem;
   }
@@ -216,6 +221,10 @@ onBeforeUnmount(() => {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  .hp-button-holder {
+    margin-top: 0px;
+  }
+
   .hp-wrapper {
     width: 800px;
     padding: 2rem 1rem;
@@ -232,6 +241,10 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 768px) {
+  .hp-button-holder {
+    margin-top: 0px;
+  }
+
   .hp-wrapper {
     flex-direction: column-reverse;
     height: auto;

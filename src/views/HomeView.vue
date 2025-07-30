@@ -6,11 +6,17 @@
 
     <InvestCreation></InvestCreation>
 
+    <OurInvestmentsPage></OurInvestmentsPage>
+
+    <InvestmentMythsPage></InvestmentMythsPage>
+
     <QuotePage></QuotePage>
 
     <ClimateCrisisPage></ClimateCrisisPage>
 
-    <ArticleBlogPage></ArticleBlogPage>
+    <!-- <PodcastPage></PodcastPage> -->
+
+    <!-- <ArticleBlogPage></ArticleBlogPage> -->
 
     <UtopiaPage></UtopiaPage>
   </div>
@@ -20,9 +26,12 @@
 import HeaderPage from './HeaderPage.vue'
 import ArticlePageNew from './ArticlePageNew.vue'
 import InvestCreation from './InvestCreation.vue'
+import OurInvestmentsPage from './OurInvestmentsPage.vue'
+import InvestmentMythsPage from './InvestmentMythsPage.vue'
 import QuotePage from './QuotePage.vue'
 import ClimateCrisisPage from './ClimateCrisisPage.vue'
-import ArticleBlogPage from './ArticleBlogPage.vue'
+// import PodcastPage from './PodcastPage.vue'
+// import ArticleBlogPage from './ArticleBlogPage.vue'
 import UtopiaPage from './UtopiaPage.vue'
 
 export default {
@@ -30,9 +39,12 @@ export default {
     HeaderPage,
     ArticlePageNew,
     InvestCreation,
+    OurInvestmentsPage,
+    InvestmentMythsPage,
     QuotePage,
     ClimateCrisisPage,
-    ArticleBlogPage,
+    // PodcastPage,
+    // ArticleBlogPage,
     UtopiaPage
   }
 }

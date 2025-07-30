@@ -10,7 +10,7 @@
         </a>
       </p>
       <p class="normal-text">
-        Jonas Jensen <br />
+        Jonas Jensen-Dharmaratne <br />
         <a class="link-text" href="mailto:jonas@godepenge.dk">
           jonas@godepenge.dk
         </a>
@@ -23,9 +23,9 @@
       <p class="link-text">
         <a class="link-text" @click="showPopup = true">Projektbeskrivelse</a
         ><br />
-        <a href="Documents/Tak-til.pdf" download>Tak til.pdf</a><br />
+        <a href="Documents/Tak.pdf" download>Tak til.pdf</a><br />
         <a href="Documents/Disclaimer.pdf" download>Disclaimer.pdf</a><br />
-        <a href="Documents/Billedkreditering.pdf" download>
+        <a href="Documents/Billedekreditering.pdf" download>
           Licens og billedkreditering.pdf
         </a>
       </p>
@@ -117,7 +117,7 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
+  align-items: flex-start;
   min-width: 232px;
 }
 
@@ -133,11 +133,16 @@ const popupContent = `Gode Investeringer projektet er udviklet af den almennytti
     align-items: center;
     text-align: center;
     padding: 32px 20px;
+    padding-bottom: 56px;
   }
 
   .flex-column {
     align-items: center;
     text-align: center;
+  }
+
+  .cp-image-holder {
+    align-items: center;
   }
 }
 </style>

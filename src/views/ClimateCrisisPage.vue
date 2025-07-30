@@ -3,23 +3,26 @@
     <div class="ccp-wrapper">
       <div class="ccp-text-holder">
         <h1 class="headline-a ccp-headline">
-          Klimakrisen og vores investeringerne
+          Klimakrisens indflydelse på vores investeringer
         </h1>
         <p class="text-a ccp-text">
-          Klimakrisen rammer ikke kun naturen – den rammer også vores
+          Klimakrisen rammer ikke kun naturen, den rammer også vores
           investeringer. <br />
           <br />
-          Når økonomisk vækst driver udledninger, og forsikringsselskaber
-          advarer om uoverskuelige risici, står vi over for en ny virkelighed.
-          Måden vi investerer på, må gentænkes. <br />
+          Når naturkatastrofer ødelægger vores huse og virksomheder får sværere
+          ved at producere, står vi overfor en ny investerings virkelighed.
+          Måden vi investerer på, må gentænkes <br />
           <br />
-          Her kan du dykke ned i, hvordan klimakrisen udfordrer vores nuværende
-          system – og hvorfor det haster med at handle anderledes.
+          Dyk ned i, hvordan klimakrisen udfordrer vores nuværende system og
+          hvorfor det haster med at handle anderledes.
         </p>
       </div>
       <div class="ccp-left-holder">
-        <div class="cpp-square"></div>
-        <img src="Images/stonks-image.png" alt="stonk" class="ccp-stonk" />
+        <img
+          src="Images/Ahmet_Yuksek_On_Unsplash.png"
+          alt="stonk"
+          class="ccp-stonk"
+        />
         <button class="button-a ccp-button" @click="goToArticle">
           Læs mere
         </button>
@@ -71,7 +74,7 @@ function goToArticle() {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 80px;
+  gap: 60px;
 }
 
 .ccp-text-holder {
@@ -101,20 +104,12 @@ function goToArticle() {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 6rem;
-}
-
-.cpp-square {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background-color: var(--color-dark-green);
-  transform: rotate(45deg);
+  gap: 4rem;
 }
 
 .ccp-stonk {
-  position: absolute;
-  width: 320px;
+  position: relative;
+  width: 400px;
   bottom: 0px;
   height: auto;
   z-index: 1;
@@ -142,6 +137,10 @@ function goToArticle() {
 }
 
 @media (max-width: 768px) {
+  .ccp-stonk {
+    width: 340px;
+  }
+
   .ccp-wrapper {
     height: auto;
     flex-direction: column;
@@ -158,6 +157,7 @@ function goToArticle() {
 
   .ccp-left-holder {
     flex-direction: column-reverse;
+    gap: 0;
   }
 
   .ccp-stonk {
