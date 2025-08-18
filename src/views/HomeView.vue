@@ -19,6 +19,8 @@
     <!-- <ArticleBlogPage></ArticleBlogPage> -->
 
     <UtopiaPage></UtopiaPage>
+
+    <PrinciplesInvestPage></PrinciplesInvestPage>
   </div>
 </template>
 
@@ -33,6 +35,7 @@ import ClimateCrisisPage from './ClimateCrisisPage.vue'
 // import PodcastPage from './PodcastPage.vue'
 // import ArticleBlogPage from './ArticleBlogPage.vue'
 import UtopiaPage from './UtopiaPage.vue'
+import PrinciplesInvestPage from './PrinciplesInvestPage.vue'
 
 export default {
   components: {
@@ -45,7 +48,8 @@ export default {
     ClimateCrisisPage,
     // PodcastPage,
     // ArticleBlogPage,
-    UtopiaPage
+    UtopiaPage,
+    PrinciplesInvestPage
   }
 }
 </script>
