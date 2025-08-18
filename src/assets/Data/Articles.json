@@ -2,7 +2,49 @@
   {
     "title": "Danskerne går på pension med en klimakrise på samvittigheden",
     "type": "Artikel",
-    "image": "Images/hugging-red-square.png",
+    "image": "Images/klimamonitor1.png",
     "link": "https://klimamonitor.dk/nyheder/debat/article18308667.ece"
+  },
+  {
+    "title": "Aktiemarkedet er en ulighedsmaskine. Måske er løsningen, at vi alle sammen bliver spekulanter",
+    "type": "Artikel",
+    "image": "Images/information1.png",
+    "link": "https://www.information.dk/udland/2021/02/aktiemarkedet-ulighedsmaskine-maaske-loesningen-sammen-spekulanter"
+  },
+  {
+    "title": "Portfolio managers beware: climate risk to stocks to be bigger than expected",
+    "type": "Artikel",
+    "image": "Images/greencentralbanking1.png",
+    "link": "https://greencentralbanking.com/2025/07/15/climate-risk-stocks/"
+  },
+  {
+    "title": "The future of wealth and growth hangs in the balance",
+    "type": "Artikel",
+    "image": "Images/mckinsey1.png",
+    "link": "https://www.mckinsey.com/mgi/overview/the-future-of-wealth-and-growth-hangs-in-the-balance#introduction"
+  },
+  {
+    "title": "Investing in Degrowth: Funding the Transition to a New Economy",
+    "type": "Artikel",
+    "image": "Images/policycommons1.png",
+    "link": "https://policycommons.net/artifacts/2369847/investing-in-degrowth/3390862/"
+  },
+  {
+    "title": "Skal finanssektoren være grøn, må vi demokratisere den",
+    "type": "Artikel",
+    "image": "Images/klimamonitor2.png",
+    "link": "https://klimamonitor.dk/debat/art9666789/Skal-finanssektoren-v%C3%A6re-gr%C3%B8n-m%C3%A5-vi-demokratisere-den"
+  },
+  {
+    "title": "Hvor skal vi bo?",
+    "type": "Artikel",
+    "image": "Images/godepenge1.png",
+    "link": "https://www.godepenge.dk/analyser/2022/11/3/hvor-skal-vi-bo"
+  },
+  {
+    "title": "Tre firmaer, de færreste kender, kontrollerer 20 procent af aktiemarkedet",
+    "type": "Artikel",
+    "image": "Images/hugging-red-square.png",
+    "link": "https://www.information.dk/udland/2023/03/tre-firmaer-faerreste-kender-kontrollerer-20-procent-aktiemarkedet"
   }
 ]

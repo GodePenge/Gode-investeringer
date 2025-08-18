@@ -132,6 +132,7 @@ function handleClick(blobTitle) {
   position: relative;
   cursor: pointer;
   text-align: center;
+  z-index: 0;
 }
 
 .blob img {
@@ -144,12 +145,14 @@ function handleClick(blobTitle) {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-20%, -50%);
   font-weight: bold;
   font-size: 0.85rem;
-  color: #003300;
+  color: var(--color-dark-green);
   text-align: center;
   width: 80%;
+  z-index: 10;
+  pointer-events: none; /* optional: allow clicks to pass through */
 }
 
 /* Top row */
@@ -186,7 +189,7 @@ function handleClick(blobTitle) {
   }
 
   .pip-wrapper {
-    height: 68rem;
+    height: 60rem;
   }
   .blob-container {
     grid-template-columns: repeat(
@@ -201,6 +204,10 @@ function handleClick(blobTitle) {
     width: 100%;
     max-width: 180px;
     height: auto;
+  }
+
+  .blob span {
+    transform: translate(-35%, -50%);
   }
 
   /* reset transforms/rows so layout flows naturally in two columns */
@@ -240,6 +247,10 @@ function handleClick(blobTitle) {
 }
 
 @media (max-width: 620px) {
+  .pip-wrapper {
+    height: 70rem;
+  }
+
   .blob-container {
     grid-template-columns: repeat(
       2,
@@ -252,6 +263,10 @@ function handleClick(blobTitle) {
   .blob {
     grid-column: auto !important;
     grid-row: auto !important;
+  }
+
+  .blob span {
+    transform: translate(-20%, -50%);
   }
 
   .blob:nth-child(2),

@@ -66,18 +66,19 @@ export default {
   computed: {
     combinedItems() {
       const articlesCopy = [...articles]
-      const blogPostsCopy = [...blogPosts]
-      const result = []
+      // const blogPostsCopy = [...blogPosts]
+      // const result = []
 
-      const maxLength = Math.max(articlesCopy.length, blogPostsCopy.length)
-      for (let i = 0; i < maxLength; i++) {
-        if (articlesCopy[i])
-          result.push({ ...articlesCopy[i], originalIndex: i })
-        if (blogPostsCopy[i])
-          result.push({ ...blogPostsCopy[i], originalIndex: i })
-      }
+      // const maxLength = Math.max(articlesCopy.length, blogPostsCopy.length)
+      // for (let i = 0; i < maxLength; i++) {
+      //   if (articlesCopy[i])
+      //     result.push({ ...articlesCopy[i], originalIndex: i })
+      //   if (blogPostsCopy[i])
+      //     result.push({ ...blogPostsCopy[i], originalIndex: i })
+      // }
 
-      return result
+      // return result
+      return articlesCopy
     }
   },
   methods: {
@@ -247,7 +248,7 @@ export default {
 
 .carousel-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 2rem;
   position: relative;
@@ -258,14 +259,17 @@ export default {
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease;
+  padding-left: 20px;
   gap: 2rem;
   will-change: transform;
-  padding-left: 260px;
+  justify-content: flex-start;
 }
 
 .image-wrapper {
   width: 250px;
   height: 250px;
+  overflow: hidden;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .image-wrapper img {
@@ -303,19 +307,14 @@ export default {
   .carousel-wrapper {
     width: 540px;
   }
-
   .carousel-track {
-    padding-left: 560px;
+    padding-left: 0px;
   }
 }
 
 @media (max-width: 768px) {
   .carousel-wrapper {
     width: 260px;
-  }
-
-  .carousel-track {
-    padding-left: 850px;
   }
 
   .abp-text-wrapper {
@@ -337,6 +336,16 @@ export default {
   }
   .abp-overlay-text {
     padding: 10px;
+  }
+
+  .image-wrapper {
+    margin-left: 22px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .carousel-track {
+    padding-left: 0px;
   }
 }
 </style>

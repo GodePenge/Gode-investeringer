@@ -16,11 +16,13 @@
 
     <!-- <PodcastPage></PodcastPage> -->
 
-    <!-- <ArticleBlogPage></ArticleBlogPage> -->
+    <ArticleBlogPage></ArticleBlogPage>
 
     <UtopiaPage></UtopiaPage>
 
     <PrinciplesInvestPage></PrinciplesInvestPage>
+
+    <SendEmailPage></SendEmailPage>
   </div>
 </template>
 
@@ -33,9 +35,10 @@ import InvestmentMythsPage from './InvestmentMythsPage.vue'
 import QuotePage from './QuotePage.vue'
 import ClimateCrisisPage from './ClimateCrisisPage.vue'
 // import PodcastPage from './PodcastPage.vue'
-// import ArticleBlogPage from './ArticleBlogPage.vue'
+import ArticleBlogPage from './ArticleBlogPage.vue'
 import UtopiaPage from './UtopiaPage.vue'
 import PrinciplesInvestPage from './PrinciplesInvestPage.vue'
+import SendEmailPage from './SendEmailPage.vue'
 
 export default {
   components: {
@@ -47,9 +50,10 @@ export default {
     QuotePage,
     ClimateCrisisPage,
     // PodcastPage,
-    // ArticleBlogPage,
+    ArticleBlogPage,
     UtopiaPage,
-    PrinciplesInvestPage
+    PrinciplesInvestPage,
+    SendEmailPage
   }
 }
 </script>
