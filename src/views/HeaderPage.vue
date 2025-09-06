@@ -2,6 +2,14 @@
   <div id="ex-header-page" class="container-fluid m-0 p-0 hp-container">
     <div class="hp-wrapper">
       <div class="hp-text-container">
+        <title>
+          Gode investeringer - Bæredygtige investeringer, aktier, klima,
+          samfundsværdi
+        </title>
+        <meta
+          name="description"
+          content="Investeringer former fremtiden. Lær at investere efter bedste afkast for økonomien og samfundet. Forstå: hvad er en aktie? hvad er en bæredygtig investering? hvordan laves passiv indkomst?"
+        />
         <h1 class="hp-headline headline-a">
           Investeringer skal gøre
           <span class="hp-dynamic-wrapper">

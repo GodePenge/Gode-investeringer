@@ -91,4 +91,15 @@ function close() {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 400px) {
+  .popup-title {
+    margin-top: 100px;
+    font-size: 1.5rem;
+  }
+
+  .popup-text {
+    width: 160px !important;
+  }
+}
 </style>

@@ -2,18 +2,27 @@
   <div id="ex-climateCrisisPage" class="ccp-container">
     <div class="ccp-wrapper">
       <div class="ccp-text-holder">
+        <title>
+          Klimaforandringernes betydning for investeringer. Klima og
+          investering.
+        </title>
+        <meta
+          name="description"
+          content="Hvordan hænger klima og investering sammen? Lær hvordan dine investeringer i aktier kan påvirke klimaet – og hvordan du vælger bæredygtigt."
+        />
         <h1 class="headline-a ccp-headline">
           Klimakrisens indflydelse på vores investeringer
         </h1>
         <p class="text-a ccp-text">
-          Klimakrisen rammer ikke kun naturen, den rammer også vores
-          investeringer. <br />
+          Klimakrisen rammer ikke kun naturen – den rammer også vores
+          investeringer.
           <br />
-          Når naturkatastrofer ødelægger vores huse og virksomheder får sværere
-          ved at producere, står vi overfor en ny investerings virkelighed.
-          Måden vi investerer på, må gentænkes <br />
           <br />
-          Dyk ned i, hvordan klimakrisen udfordrer vores nuværende system og
+          Når naturkatastrofer ødelægger vores huse, og virksomheder får sværere
+          ved at producere, står vi over for en ny investeringsvirkelighed.
+          Måden, vi investerer på, må gentænkes. <br />
+          <br />
+          Dyk ned i, hvordan klimakrisen udfordrer vores nuværende system – og
           hvorfor det haster med at handle anderledes.
         </p>
       </div>
@@ -162,6 +171,20 @@ function goToArticle() {
 
   .ccp-stonk {
     top: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ccp-wrapper {
+    width: 100%;
+  }
+
+  .ccp-stonk {
+    width: 100%;
+  }
+
+  .ccp-headline {
+    font-size: 2.8rem;
   }
 }
 </style>

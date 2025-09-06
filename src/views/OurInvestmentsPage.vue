@@ -1,22 +1,18 @@
 <template>
   <div class="container-oip">
     <div class="wrapper-oip">
-      <h1 class="headline-a headline-oip">Vores investeringer</h1>
+      <h1 class="headline-a headline-oip">Danskernes investeringer i tal</h1>
 
       <div class="row-container">
         <div class="image-container" @click="onClick(0)">
-          <div class="image-cropper">
-            <img src="Images/building2-red-semi.png" class="image-oip" />
-          </div>
+          <div class="semi-circle"></div>
 
           <span class="text-a overlay-text">{{
             ourInvestmentsData[0].title
           }}</span>
         </div>
         <div class="image-container" @click="onClick(1)">
-          <div class="image-cropper">
-            <img src="Images/building2-red-semi.png" class="image-oip" />
-          </div>
+          <div class="semi-circle"></div>
 
           <span class="text-a overlay-text">{{
             ourInvestmentsData[1].title
@@ -25,18 +21,14 @@
       </div>
       <div class="row-container" @click="onClick(2)">
         <div class="image-container">
-          <div class="image-cropper">
-            <img src="Images/building2-red-semi.png" class="image-oip" />
-          </div>
+          <div class="semi-circle"></div>
 
           <span class="text-a overlay-text">{{
             ourInvestmentsData[2].title
           }}</span>
         </div>
         <div class="image-container" @click="onClick(3)">
-          <div class="image-cropper">
-            <img src="Images/building2-red-semi.png" class="image-oip" />
-          </div>
+          <div class="semi-circle"></div>
 
           <span class="text-a overlay-text">{{
             ourInvestmentsData[3].title
@@ -101,7 +93,7 @@ function onClick(id) {
   align-items: left;
   text-align: left;
   flex-direction: column;
-  gap: 0px;
+  gap: 40px;
 }
 
 .headline-oip {
@@ -120,23 +112,27 @@ function onClick(id) {
   align-items: center;
   text-align: center;
   flex-direction: row;
-  gap: 40px;
+  gap: 120px;
+}
+
+.semi-circle {
+  width: 400px;
+  height: 200px;
+  background: var(--color-red);
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
 }
 
 .image-container {
   position: relative;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.image-cropper {
-  width: 420px;
-  height: 250px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.image-container:hover .image-cropper {
+.semi-circle:hover {
   transform: scale(1.03);
 }
 
@@ -152,27 +148,62 @@ function onClick(id) {
 }
 
 .overlay-text {
-  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: var(--color-white);
   font-size: 18px;
-  left: 125px;
-  position: absolute;
   text-align: center;
-  top: 130px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .row-container {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
+  .semi-circle {
+    width: 300px;
+    height: 150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+  }
+
+  .overlay-text {
+    width: 60%;
+  }
+
   .headline-oip {
     padding-left: 0;
   }
 
   .wrapper-oip {
+    height: 1000px !important;
+    padding-top: 0;
+    padding-bottom: 0;
     height: 74rem;
   }
 
   .row-container {
     flex-direction: column;
-    gap: 0px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .headline-oip {
+    font-size: 2.4rem;
+  }
+
+  .semi-circle {
+    width: 280px;
+    height: 150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
   }
 }
 </style>

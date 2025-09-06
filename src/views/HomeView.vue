@@ -1,5 +1,11 @@
 <template>
   <div class="container-fluid m-0 p-0" style="width: 100%">
+    <title>Gode Investeringer - Invest Smart</title>
+    <meta
+      name="description"
+      content="Find tips til gode investeringer, aktier, og finansiel vækst."
+    />
+
     <HeaderPage></HeaderPage>
 
     <ArticlePageNew></ArticlePageNew>

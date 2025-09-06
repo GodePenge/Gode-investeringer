@@ -3,16 +3,14 @@
     <div class="pip-wrapper">
       <div class="pip-text-wrapper">
         <h1 class="pip-headline headline-a">
-          Principper for Gode Investeringer
+          7 principper for bæredygtige investeringer
         </h1>
         <p class="pip-text text-a">
-          Hvis investeringer skal gøre verden bedre, har vi brug for værktøjer
-          til at vurdere dem. <br /><br />
-          Derfor har vi formuleret 7 principper, som kan hjælpe dig med at se,
-          om en investering ikke kun er god for dig, men også for samfundet,
-          naturen og kommende generationer. <br /><br />
-          Brug dem som kompas til at navigere i en ny investerings kultur, hvor
-          værdier og etik følges ad.
+          Vil du vurdere, om en investering er god for både dig og verden? Vi
+          har udviklet 7 principper, som kan guide dig til bæredygtige
+          investeringer med ansvarlig samfundsværdi. <br /><br />
+          Brug dem som et kompas til at navigere i en ny investeringskultur,
+          hvor værdier og etik følges ad.
         </p>
       </div>
 
@@ -88,21 +86,20 @@ function handleClick(blobTitle) {
   box-sizing: border-box;
   padding: 3rem 2rem;
   padding-top: 5rem;
-  padding-bottom: 0;
   background-color: var(--color-white);
   display: flex;
   justify-content: center;
-  align-items: left;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   flex-direction: column;
   gap: 0px;
 }
 
 .pip-text-wrapper {
-  width: 85%;
+  width: 80%;
   display: flex;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   text-align: left;
   flex-direction: column;
 }
@@ -110,24 +107,25 @@ function handleClick(blobTitle) {
 .pip-headline {
   font-size: 3.7rem;
   color: var(--color-dark-green);
+  text-align: left;
+  align-self: flex-start;
   margin-bottom: 0;
 }
 
 .pip-text {
+  text-align: left;
   font-size: 1rem;
   color: var(--color-dark-green) !important;
 }
 
 .blob-container {
   display: grid;
-  grid-template-columns: repeat(4, 0.8fr);
-  gap: 0rem;
+  grid-template-columns: repeat(4, 1.4fr);
+  gap: 0rem 6rem;
   justify-items: center;
-  max-width: 1000px;
   padding: 0rem;
 }
 
-/* Each blob styling */
 .blob {
   position: relative;
   cursor: pointer;
@@ -139,6 +137,11 @@ function handleClick(blobTitle) {
   width: 100%;
   max-width: 200px;
   height: auto;
+  transition: transform 0.4s ease;
+}
+
+.blob img:hover {
+  transform: scale(1.05);
 }
 
 .blob span {
@@ -254,10 +257,11 @@ function handleClick(blobTitle) {
   .blob-container {
     grid-template-columns: repeat(
       2,
-      minmax(120px, 0.5fr)
+      minmax(140px, 0.6fr)
     ); /* tighter columns */
     justify-items: center;
     overflow: visible;
+    gap: 20px;
   }
 
   .blob {
@@ -267,6 +271,7 @@ function handleClick(blobTitle) {
 
   .blob span {
     transform: translate(-20%, -50%);
+    font-size: 0.9rem;
   }
 
   .blob:nth-child(2),
@@ -274,6 +279,23 @@ function handleClick(blobTitle) {
   .blob:nth-child(5),
   .blob:nth-child(6) {
     transform: translateY(0%) translateX(0%);
+  }
+}
+
+@media (max-width: 400px) {
+  .pip-wrapper {
+    height: 80rem;
+  }
+
+  .pip-headline {
+    font-size: 2.7rem;
+  }
+
+  .blob-container {
+    grid-template-columns: repeat(1, minmax(100px, 0.6fr));
+    justify-items: center;
+    overflow: visible;
+    gap: 10px, 0px;
   }
 }
 </style>

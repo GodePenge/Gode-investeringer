@@ -277,4 +277,16 @@ function onClick(name) {
     justify-content: center;
   }
 }
+
+@media (max-width: 400px) {
+  .mobile-diamond-wrapper {
+    top: auto !important; /* ignore inline top */
+    position: relative; /* let them flow below the text */
+    margin-top: 40px; /* add desired spacing */
+  }
+
+  .mobile-button-holder {
+    height: auto; /* prevent giant empty space */
+  }
+}
 </style>

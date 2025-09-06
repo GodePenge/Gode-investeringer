@@ -7,12 +7,13 @@
         </h1>
         <p class="sep-text text-a">
           Hvordan fungerer vores investeringssystem i dag? Hvilke udfordringer
-          stiller det? <br />
-          Hvordan kan vores vi mulighederne for forandring? <br />
+          stiller det?
           <br />
-          Gennem vores interaktive workshop hører deltagerne mere om <br />
-          investeringernes forandringspotentiale og, hvordan vi skaber en bedre
-          verden.
+          Og hvordan kan vi bruge mulighederne for forandring? <br />
+          <br />
+          Gennem vores interaktive workshop hører deltagerne mere om
+          investeringernes forandringspotentiale – og hvordan vi sammen kan
+          skabe en bedre verden.
         </p>
 
         <div class="sep-input-holder">
@@ -73,13 +74,12 @@ export default {
 }
 
 .sep-wrapper {
-  height: 40rem;
+  height: 36rem;
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
   padding: 3rem 2rem;
   padding-top: 5rem;
-  padding-bottom: 0;
   background-color: var(--color-light-purple);
   display: flex;
   justify-content: center;
@@ -99,9 +99,9 @@ export default {
 }
 
 .sep-headline {
-  font-size: 3.7rem;
+  font-size: 3.4rem;
   color: var(--color-white);
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .sep-text {
@@ -192,7 +192,7 @@ export default {
   }
 
   .sep-button {
-    width: 188px;
+    width: 188px !important;
   }
 }
 
@@ -203,6 +203,12 @@ export default {
 
   .sep-wrapper {
     height: 46rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .sep-wrapper {
+    height: 54rem;
   }
 }
 </style>

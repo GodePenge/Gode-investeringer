@@ -2,6 +2,14 @@
   <div class="ic-container">
     <div class="ic-wrapper">
       <div class="ic-text-holder">
+        <title>
+          Investeringer skal give afkast, men samtidig være bæredygtige og
+          socialt ansvarlige.
+        </title>
+        <meta
+          name="description"
+          content="Investering handler ikke kun om afkast. Spørg dig selv: Hvilken verden vil du skabe gennem dine investeringer? Find inspiration her."
+        />
         <h1 class="headline-a ic-headline">
           Hvad skal dine investeringer skabe?
         </h1>

@@ -12,6 +12,13 @@
         </button>
       </div>
       <div class="up-text-holder">
+        <title>
+          Investér i den verden du ønsker | Bæredygtige ansvarlige investeringer
+        </title>
+        <meta
+          name="description"
+          content="Investeringer kan give meget mere end afkast. Vi kan bruge investeringer til at forme en bedre fremtid."
+        />
         <h1 class="headline-a up-headline">Investér i den verden du ønsker</h1>
         <p class="text-a up-text">
           Når vi investerer, former vi fremtiden. <br />

@@ -215,7 +215,7 @@ export default {
 }
 
 .abp-small-title {
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   color: var(--color-white);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -276,6 +276,14 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  background: rgba(118, 71, 185, 0.8); /* purple w/ transparency */
+  pointer-events: none; /* lets clicks pass through if needed */
 }
 
 .text-content small {
@@ -346,6 +354,23 @@ export default {
 
   .carousel-track {
     padding-left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .abp-wrapper {
+    height: 30rem;
+  }
+
+  .image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .abp-small-title {
+    font-size: 0.9rem;
+    width: 120px;
+    -webkit-line-clamp: 3;
   }
 }
 </style>

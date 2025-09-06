@@ -5,14 +5,6 @@
 
       <div></div>
 
-      <!-- <div class="rich-text">
-        <p
-          class="td-text"
-          v-for="(paragraph, i) in currentCard.fullText"
-          :key="i"
-          v-html="paragraph"
-        ></p>
-      </div> -->
       <div class="rich-text" v-html="combinedHtml"></div>
 
       <div class="td-button-holder" :style="{ marginTop: buttonOffset + 'px' }">
@@ -115,8 +107,6 @@ export default {
 }
 </script>
 
-<style></style>
-
 <style scoped>
 .rich-text ::v-deep h3 {
   font-family: Arial;
@@ -152,7 +142,7 @@ export default {
 
 .td-headline {
   color: var(--color-dark-green);
-  font-size: 3.2rem;
+  font-size: 3.1rem;
   margin-bottom: 0;
 }
 

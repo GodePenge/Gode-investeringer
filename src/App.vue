@@ -1,7 +1,7 @@
 <template>
   <navbarNew></navbarNew>
   <RouterView></RouterView>
-  <ContactPage></ContactPage>
+  <ContactPage id="ex-contact-page-1"></ContactPage>
 </template>
 
 <script>

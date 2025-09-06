@@ -29,9 +29,10 @@
         </h2>
         <p class="text-a">
           Når man hører ordet investering, tænker mange måske på aktier,
-          ejendomme eller pension. Men egentlig handler investering
-          grundlæggende om, at bruge sine penge på udvikling, der skaber
-          forandring over tid.
+          ejendomme eller pension. <br />
+          <br />
+          Men grundlæggende handler investering om at bruge sine penge på
+          udvikling, der skaber forandring over tid.
         </p>
       </div>
     </div>

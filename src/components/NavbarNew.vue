@@ -24,7 +24,7 @@
       <a
         class="navbar-text highlight-navbar-text"
         href="#"
-        @click.prevent="scrollToTarget('ex-contact-page')"
+        @click.prevent="scrollToTarget('ex-contact-page-1')"
         >Kontakt os</a
       >
       <Slide right :closeOnNavigation="true" class="bm-slide-wrapper">
