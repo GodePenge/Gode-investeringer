@@ -20,7 +20,7 @@
 
     <ClimateCrisisPage></ClimateCrisisPage>
 
-    <!-- <PodcastPage></PodcastPage> -->
+    <PodcastPage></PodcastPage>
 
     <ArticleBlogPage></ArticleBlogPage>
 
@@ -40,7 +40,7 @@ import OurInvestmentsPage from './OurInvestmentsPage.vue'
 import InvestmentMythsPage from './InvestmentMythsPage.vue'
 import QuotePage from './QuotePage.vue'
 import ClimateCrisisPage from './ClimateCrisisPage.vue'
-// import PodcastPage from './PodcastPage.vue'
+import PodcastPage from './PodcastPage.vue'
 import ArticleBlogPage from './ArticleBlogPage.vue'
 import UtopiaPage from './UtopiaPage.vue'
 import PrinciplesInvestPage from './PrinciplesInvestPage.vue'
@@ -55,7 +55,7 @@ export default {
     InvestmentMythsPage,
     QuotePage,
     ClimateCrisisPage,
-    // PodcastPage,
+    PodcastPage,
     ArticleBlogPage,
     UtopiaPage,
     PrinciplesInvestPage,

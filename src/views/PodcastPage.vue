@@ -8,19 +8,39 @@
         <div class="image-cropper">
           <img src="Images/building2-red-semi.png" class="image-semi" />
         </div>
-        <p class="text-a small-headline">tmp headline</p>
-        <p class="text-a text-pp">tmp text</p>
-        <button class="button-a button-pp" @click="goToLink">
-          Lyt på spotify
-        </button>
+        <p class="text-a small-headline">Den sorte finanssektor</p>
+        <p class="text-a text-pp">
+          Hvilken rolle spiller finanssektoren i den grønne omstilling? Vi
+          spørger, hvorfor banker og pensionskasser investerer så mange
+          millioner i den fossile industri. Lyt med på din favorit platform.
+        </p>
+
+        <div class="pp-button-holder">
+          <button class="button-a button-pp" @click="goToLinkSpotify">
+            Lyt på spotify
+          </button>
+          <button class="button-a button-pp" @click="goToLinkSpreaker">
+            Lyt på spreaker
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-const goToLink = () => {
-  window.open('https://www.google.com', '_blank')
+const goToLinkSpotify = () => {
+  window.open(
+    'https://open.spotify.com/show/4FrtBLrO6dEWxOsELdyEa1?si=c36f81df9de54cf6',
+    '_blank'
+  )
+}
+
+const goToLinkSpreaker = () => {
+  window.open(
+    'https://www.spreaker.com/podcast/den-sorte-finanssektor--6866880',
+    '_blank'
+  )
 }
 </script>
 
@@ -34,7 +54,7 @@ const goToLink = () => {
 }
 
 .wrapper-pp {
-  height: 40rem;
+  height: 44rem;
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
@@ -59,6 +79,7 @@ const goToLink = () => {
 .small-headline {
   color: var(--color-dark-green);
   font-weight: 600;
+  font-size: 1.5rem;
   margin-bottom: 0;
   margin-left: 18px;
 }
@@ -69,6 +90,18 @@ const goToLink = () => {
   margin-left: 18px;
 }
 
+.pp-button-holder {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  gap: 16px;
+}
+
 .right-holder {
   display: flex;
   justify-content: center;
@@ -77,6 +110,8 @@ const goToLink = () => {
   flex-direction: column;
   gap: 20px;
   margin-bottom: 60px;
+  width: 560px;
+  max-width: 100%;
 }
 
 .image-cropper {
@@ -130,14 +165,40 @@ const goToLink = () => {
     flex-direction: column;
     gap: 0px;
   }
+  .right-holder {
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .image-cropper {
+    position: relative;
+  }
+
+  .image-semi {
+    position: relative;
+  }
+
+  .button-pp {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 480px) {
+  .headline-pp {
+    width: 90%;
+  }
+
   .image-cropper {
     width: 300px;
     height: 160px;
     overflow: hidden;
     position: relative;
+  }
+
+  .pp-button-holder {
+    margin-top: 10px;
   }
 }
 </style>
